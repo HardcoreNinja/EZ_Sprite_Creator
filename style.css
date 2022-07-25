@@ -1,0 +1,34 @@
+#background{
+    width:auto;
+    height: 1080px;
+    background: content-box linear-gradient(45deg, magenta, skyblue);
+    display: flex;
+    place-content: center center;
+    place-items: center center;
+    flex-flow: column wrap;
+}
+
+#container{
+    width: 480px;
+    height: 480px;
+    flex-flow: row wrap;
+    display: flex;
+    place-content: flex-start flex-start;
+}
+
+.square{
+    width: 28px; 
+    height: 28px;
+    border: solid pink;
+    border-width: 1px;
+    transition: all 0.07s;
+}
+
+.squareOn{
+    width: 28px; 
+    height: 28px;
+    border: solid;
+    border-image: linear-gradient(45deg, magenta, skyblue) 1;
+    border-width: 1px;
+    background-color: rgba(29, 227, 52, 0.613);
+}
