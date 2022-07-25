@@ -3,8 +3,8 @@
     src: url(fonts/lato/Lato-Regular.ttf);
 }
 
-#background{
-    width:auto;
+#background {
+    width: auto;
     height: 1080px;
     background: content-box linear-gradient(45deg, magenta, skyblue);
     display: flex;
@@ -12,21 +12,22 @@
     flex-flow: row nowrap;
 }
 
-#nav{
-   width:auto;
-   height: auto;
-   display: flex;
-   font-family: "Lato";
-   font-size: 12px;
-   place-content: center flex-start;
-   flex-flow: column wrap;
+#nav {
+    width: auto;
+    height: auto;
+    display: flex;
+    font-family: "Lato";
+    font-size: 12px;
+    place-content: center flex-start;
+    flex-flow: column wrap;
 }
-.nav.logo{
+
+.nav.logo {
     padding: 10px;
 }
 
-#bodyContainer1{
-    width:auto;
+#bodyContainer1 {
+    width: auto;
     height: auto;
     flex: 1;
     display: flex;
@@ -34,7 +35,7 @@
     place-content: center center;
 }
 
-#container{
+#container {
     width: 480px;
     height: 480px;
     padding: 10px;
@@ -43,16 +44,16 @@
     place-content: flex-start flex-start;
 }
 
-.square{
-    width: 28px; 
+.square {
+    width: 28px;
     height: 28px;
     border: solid pink;
     border-width: 1px;
     transition: all 0.07s;
 }
 
-.squareOn{
-    width: 28px; 
+.squareOn {
+    width: 28px;
     height: 28px;
     border: solid;
     border-color: white;
