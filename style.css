@@ -5,7 +5,7 @@
 
 #background {
     width: auto;
-    height: 1080px;
+    height: 964px;
     background: content-box linear-gradient(45deg, magenta, skyblue);
     display: flex;
     place-content: flex-start flex-start;
@@ -16,17 +16,31 @@
     width: auto;
     height: auto;
     display: flex;
+    border: solid black;
     font-family: "Lato";
     font-size: 12px;
     place-content: center flex-start;
     flex-flow: column wrap;
+    padding: 10px
 }
 
 .nav.logo {
     padding: 10px;
 }
 
-#bodyContainer1 {
+.buttonStyle.push {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid black;
+    border-radius: 5px;
+    color: white;
+    font-family: "Lato";
+    margin-top: auto;
+}
+
+#gridContainer {
     width: auto;
     height: auto;
     flex: 1;
