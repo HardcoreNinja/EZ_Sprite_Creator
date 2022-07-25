@@ -28,7 +28,7 @@
     width: 28px; 
     height: 28px;
     border: solid;
-    border-image: linear-gradient(45deg, magenta, skyblue) 1;
+    border-image: linear-gradient(45deg, magenta, skyblue);
     border-width: 1px;
     background-color: rgba(29, 227, 52, 0.613);
 }
