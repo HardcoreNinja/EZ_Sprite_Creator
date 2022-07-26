@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Lato";
-    src: url(fonts/lato/Lato-Regular.ttf);
+    src: url(fonts/lato/Lato-Light.ttf);
 }
 
 #background {
@@ -16,7 +16,6 @@
     width: auto;
     height: auto;
     display: flex;
-    border: solid black;
     font-family: "Lato";
     font-size: 12px;
     place-content: center flex-start;
@@ -28,7 +27,7 @@
     padding: 10px;
 }
 
-.buttonStyle.push {
+.buttonStyle{
     width: auto;
     height: auto;
     padding: 10px;
@@ -37,6 +36,9 @@
     border-radius: 5px;
     color: white;
     font-family: "Lato";
+}
+
+.push{
     margin-top: auto;
 }
 
@@ -61,16 +63,7 @@
 .square {
     width: 28px;
     height: 28px;
-    border: solid pink;
+    border: solid white;
+    background-color: transparent;
     border-width: 1px;
-    transition: all 0.07s;
-}
-
-.squareOn {
-    width: 28px;
-    height: 28px;
-    border: solid;
-    border-color: white;
-    border-width: 1px;
-    background-color: rgba(29, 227, 52, 0.613);
 }
