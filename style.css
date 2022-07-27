@@ -20,7 +20,8 @@
     font-size: 12px;
     place-content: center flex-start;
     flex-flow: column wrap;
-    padding: 10px
+    padding: 10px;
+    gap: 10px;
 }
 
 .nav.logo {
