@@ -1,5 +1,5 @@
 /*Variables======================================================================*/
-let color = 'black';
+let paintColor = 'black';
 let containerSize = 480;
 let squaresPerRow = 16;
 let numSquares = Math.pow(squaresPerRow, 2);
@@ -8,7 +8,10 @@ let squarePixelSize = (containerSize / squaresPerRow) - 2;
 /*Clear Button=================================================================*/
 function clear() {
     const squares = document.querySelectorAll('.square');
-    squares.forEach(square => square.style.backgroundColor = "transparent");
+    squares.forEach(function(square){
+        square.style.backgroundColor = "transparent";
+        square.style.borderColor = "white";
+    });
 }
 
 const clearButton = document.querySelector('#clearButton');
@@ -17,9 +20,15 @@ clearButton.addEventListener("mousedown", clear);
 /*Create 16x16 Grid=============================================================*/
 function mouseDown() {
     if (this.style.backgroundColor === "transparent")
-        this.style.backgroundColor = color;
+    {
+        this.style.backgroundColor = paintColor;
+        this.style.borderColor = paintColor;
+    }
     else if (this.style.backgroundColor !== "transparent")
+    {
         this.style.backgroundColor = "transparent";
+        this.style.borderColor = "white";
+    }
 }
 
 function drawGrid() {
@@ -40,13 +49,14 @@ function drawGrid() {
 window.onload = drawGrid();
 
 
-/*Color Picker==================================================================*/
+/*Paint Color Picker==================================================================*/
 function changeColor(e) {
-    color = e.target.value;
+    //console.log("Paint Color: " +  e.target.value);
+    paintColor = e.target.value;
 }
 
-const colorPicker = document.querySelector('#colorPicker');
-colorPicker.addEventListener('change', changeColor);
+const colorPicker = document.querySelector('#paintColorPicker');
+colorPicker.addEventListener('input', changeColor);
 
 /*Slider========================================================================*/
 function adjustSize(e){
