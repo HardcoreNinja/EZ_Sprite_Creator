@@ -39,8 +39,32 @@
     font-family: "Lato";
 }
 
-.push{
+#colorContainer{
+    place-content: center center;
+    place-items: center center;
+    flex-flow: row wrap;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid black;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
     margin-top: auto;
+}
+input[type='color'] {
+    -webkit-appearance: none;
+    background-color: transparent;
+    width: 80px;
+    height: 80px;
+    border: none;
+  }
+.colorPicker::-webkit-color-swatch{
+    border: none;
+    border-radius: 50px;
+}
+button:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
 }
 
 #gridContainer {
