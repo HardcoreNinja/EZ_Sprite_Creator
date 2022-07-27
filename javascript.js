@@ -15,7 +15,7 @@ const clearButton = document.querySelector('#clearButton');
 clearButton.addEventListener("mousedown", clear);
 
 /*Create 16x16 Grid=============================================================*/
-function mouseOver() {
+function mouseDown() {
     if (this.style.backgroundColor === "transparent")
         this.style.backgroundColor = color;
     else if (this.style.backgroundColor !== "transparent")
@@ -31,10 +31,9 @@ function drawGrid() {
         square.style.width = squarePixelSize.toString() + "px";
         square.style.height = squarePixelSize.toString() + "px";
         square.style.borderWidth = "1px";
-        square.addEventListener("mouseover", mouseOver)
+        square.addEventListener("mousedown", mouseDown)
         container.appendChild(square);
     }
-    
     clear();
 }
 
@@ -50,7 +49,6 @@ const colorPicker = document.querySelector('#colorPicker');
 colorPicker.addEventListener('change', changeColor);
 
 /*Slider========================================================================*/
-
 function adjustSize(e){
     //console.log(e.target.value);
     const container = document.querySelector('#container');
