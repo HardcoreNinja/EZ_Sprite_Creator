@@ -1,6 +1,9 @@
 /*Variables======================================================================*/
 let color = 'black';
-
+let containerSize = 480;
+let squaresPerRow = 16;
+let numSquares = Math.pow(squaresPerRow, 2);
+let squarePixelSize = (containerSize / squaresPerRow) - 2;
 
 /*Clear Button=================================================================*/
 function clear() {
@@ -22,9 +25,12 @@ function mouseOver() {
 function drawGrid() {
     const container = document.querySelector('#container');
 
-    for (let i = 0; i < 256; i++) {
+    for (let i = 0; i < numSquares; i++) {
         let square = document.createElement('div');
         square.classList.add('square');
+        square.style.width = squarePixelSize.toString() + "px";
+        square.style.height = squarePixelSize.toString() + "px";
+        square.style.borderWidth = "1px";
         square.addEventListener("mouseover", mouseOver)
         container.appendChild(square);
     }
@@ -43,6 +49,22 @@ function changeColor(e) {
 const colorPicker = document.querySelector('#colorPicker');
 colorPicker.addEventListener('change', changeColor);
 
+/*Slider========================================================================*/
 
+function adjustSize(e){
+    //console.log(e.target.value);
+    const container = document.querySelector('#container');
 
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+}
+    containerSize = 480;    
+    squaresPerRow = e.target.value; 
+    numSquares = Math.pow(squaresPerRow, 2);
+    squarePixelSize = (containerSize / squaresPerRow) - 2;
+
+    drawGrid();
+}
+const slider = document.querySelector('#gridSize');
+slider.addEventListener('input', adjustSize);
 

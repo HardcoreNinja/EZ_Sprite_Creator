@@ -63,11 +63,8 @@
 }
 
 .square {
-    width: 28px;
-    height: 28px;
     border: solid white;
     background-color: transparent;
-    border-width: 1px;
 }
 
 /*Slider==========================================================================*/
