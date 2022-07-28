@@ -26,7 +26,11 @@ function mouseDown() {
     }
     else if (this.style.backgroundColor !== "transparent") {
         this.style.backgroundColor = "transparent";
-        this.style.borderColor = "white";
+
+        if (hideGridBool)
+            this.style.borderColor = "transparent";
+        else if (!hideGridBool)
+            this.style.borderColor = "white";
     }
 }
 
@@ -53,15 +57,14 @@ const hideGridButton = document.querySelector('#hideGridButton');
 function hideGrid() {
     hideGridBool = !hideGridBool
     const squares = document.querySelectorAll('.square');
-    
+
     if (hideGridBool) {
         squares.forEach(function (square) {
             if (square.style.backgroundColor === 'transparent')
                 square.style.borderColor = 'transparent';
         });
     }
-    else if(!hideGridBool)
-    {
+    else if (!hideGridBool) {
         squares.forEach(function (square) {
             if (square.style.backgroundColor === 'transparent')
                 square.style.borderColor = 'white';
@@ -82,29 +85,29 @@ var btn = document.getElementById("downloadButton");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+btn.onclick = function () {
+    modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span.onclick = function () {
+    modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 /*CSS to Image Converter=================================================================*/
-document.getElementById("downloadButton").addEventListener("click", function() {
-	html2canvas(document.getElementById("container"),{backgroundColor:null}).then(function (canvas) {
-			document.getElementById("previewImg").appendChild(canvas);
-		})    
- });
- 
+document.getElementById("downloadButton").addEventListener("click", function () {
+    html2canvas(document.getElementById("container"), { backgroundColor: null }).then(function (canvas) {
+        document.getElementById("previewImg").appendChild(canvas);
+    })
+});
+
 /*Paint Color Picker==================================================================*/
 function changeColor(e) {
     //console.log("Paint Color: " +  e.target.value);
