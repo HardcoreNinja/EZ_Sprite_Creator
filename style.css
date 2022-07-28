@@ -37,6 +37,7 @@
     border-radius: 5px;
     color: white;
     font-family: "Lato";
+    transition: all 0.5s;
 }
 
 #colorContainer{
@@ -57,6 +58,7 @@ input[type='color'] {
     width: 80px;
     height: 80px;
     border: none;
+    transition: all 0.5s;
   }
 .colorPicker::-webkit-color-swatch{
     border: none;
@@ -117,6 +119,11 @@ input[type='color']:hover {
   }
   
   /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb:hover
+  {
+    transform: scale(1.05);
+  }
+
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
@@ -126,6 +133,7 @@ input[type='color']:hover {
     border: 1px solid black;
     border-radius: 50%;
     cursor: pointer; /* Cursor on hover */
+    transition: all 0.5s;
   }
   
   .slider::-moz-range-thumb {
