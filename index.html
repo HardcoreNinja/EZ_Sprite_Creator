@@ -22,6 +22,7 @@
                 <pa>Paint: </pa>
                 <input type="color" value="#000000" class="colorPicker" id="paintColorPicker">
             </div>
+            <button id="downloadButton" class="buttonStyle">Download</button>
             <button id="hideGridButton" class="buttonStyle">Hide Grid</button>
             <button id="clearButton" class="buttonStyle">Clear</button>
         </nav>
@@ -33,7 +34,15 @@
             <div class="slidecontainer">
                 <input type="range" min="16" max="96" value="16" class="slider" id="gridSize">
             </div>
+        </div>
 
+        <!-- The Modal -->
+        <div id="previewModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Preview</h1>
+            </div>
         </div>
 
     </div>
