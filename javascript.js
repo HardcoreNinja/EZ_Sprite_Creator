@@ -98,6 +98,13 @@ window.onclick = function(event) {
   }
 }
 
+/*CSS to Image Converter=================================================================*/
+document.getElementById("downloadButton").addEventListener("click", function() {
+	html2canvas(document.getElementById("container"),{backgroundColor:null}).then(function (canvas) {
+			document.getElementById("previewImg").appendChild(canvas);
+		})    
+ });
+ 
 /*Paint Color Picker==================================================================*/
 function changeColor(e) {
     //console.log("Paint Color: " +  e.target.value);
