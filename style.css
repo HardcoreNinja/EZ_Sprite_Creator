@@ -69,6 +69,13 @@ input[type='color']:hover {
   transform: scale(1.05);
 }
 
+button:active{
+  border-color:#8ac8eb;
+  text-shadow: 0 0 10px #8ac8eb ;
+  color: 8ac8eb;
+  transform: scale(1.15);
+}
+
 #gridContainer {
     width: auto;
     height: auto;
