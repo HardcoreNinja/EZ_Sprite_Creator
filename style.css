@@ -3,9 +3,19 @@
   src: url(fonts/lato/Lato-Light.ttf);
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato";
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+  color: rgb(221, 219, 248);
+}
+
 #background {
   width: auto;
-  height: 960px;
+  height:100vh;
   background: linear-gradient(45deg, magenta, skyblue);
   display: flex;
   place-content: flex-start flex-start;
